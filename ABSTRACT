@@ -1,9 +1,20 @@
-The purpose of this project is to design and implement a two-tier architecture with a disaster recovery (DR) strategy using AWS services and DevOps tools. The expected outcome is a robust and reliable system that ensures data integrity through automated backup and recovery mechanisms. By hosting the application on EC2 instances and using S3 for data storage, coupled with AWS Backup for disaster recovery, the project aims to minimize downtime and protect against data loss.
-The existing process for many businesses involves manual backup procedures and ad-hoc disaster recovery plans. These methods are often prone to human error, lack consistency, and can result in significant downtime during recovery operations. Manual processes also struggle to keep up with the dynamic and scalable nature of modern cloud environments, making it difficult to ensure that all data is regularly and reliably backed up.
-In today's cloud computing world, protecting data and having reliable backups is incredibly important. Companies rely heavily on their data, and any loss can be disastrous, potentially halting operations and causing significant financial and reputational damage. To tackle this, businesses need strong, reliable solutions that can keep their systems running smoothly even when unexpected problems occur.
-Following tools and languages will be used in this project: -
+The purpose of this project is to design and implement a two-tier architecture with a disaster recovery (DR) strategy using AWS services and DevOps tools. 
+The expected outcome is a robust and reliable system that ensures data integrity through automated backup and recovery mechanisms. By hosting the application on EC2 instances 
+and using S3 for data storage, coupled with AWS Backup for disaster recovery, the project aims to minimize downtime and protect against data loss.
+
+The existing process for many businesses involves manual backup procedures and ad-hoc disaster recovery plans. These methods are often prone to human error, lack consistency, 
+and can result in significant downtime during recovery operations. Manual processes also struggle to keep up with the dynamic and scalable nature of modern cloud environments, 
+making it difficult to ensure that all data is regularly and reliably backed up.
+
+In today's cloud computing world, protecting data and having reliable backups is incredibly important. Companies rely heavily on their data, and any loss can be disastrous, 
+potentially halting operations and causing significant financial and reputational damage. 
+
+To tackle this, businesses need strong, reliable solutions that can keep their systems running smoothly even when unexpected problems occur. Following tools and languages will be used in this project: -
+
 Terraform- Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently.
 Jenkins- Jenkins is an open-source continuous integration software tool written in the Java programming language for testing and reporting on isolated changes in a larger code base in real-time.
 Github- Online repository which contains the whole code and scripts of this project.
 PowerShell- PowerShell is a task automation and configuration management framework developed by Microsoft. It consists of a command-line shell and an associated scripting language.
-AWS- Amazon Web Services (AWS) is a comprehensive and widely adopted cloud platform offered by Amazon. It provides a broad range of cloud computing services that allow businesses and individuals to build, deploy, and manage applications and infrastructure without the need to invest in physical hardware. AWS offers services that are accessible over the internet on a pay-as-you-go basis, enabling organizations to scale their operations efficiently.
+AWS- Amazon Web Services (AWS) is a comprehensive and widely adopted cloud platform offered by Amazon. It provides a broad range of cloud computing services that allow 
+businesses and individuals to build, deploy, and manage applications and infrastructure without the need to invest in physical hardware. AWS offers services that are 
+accessible over the internet on a pay-as-you-go basis, enabling organizations to scale their operations efficiently.
