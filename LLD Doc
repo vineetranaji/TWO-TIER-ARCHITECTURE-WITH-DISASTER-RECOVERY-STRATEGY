@@ -1,0 +1,122 @@
+Low-Level Design (LLD) Document for Two-Tier Architecture with Disaster Recovery on AWS
+
+
+1.	Introduction
+-	Project Overview: Implementation of a two-tier architecture using AWS for disaster recovery.
+-	Objective: Ensure data integrity, and disaster recovery using AWS and DevOps tools.
+
+
+2.	System Architecture Design:
+ 
+-	Architecture Overview:
+-	Two-tier architecture: Application tier on EC2 instances and data tier on S3.
+-	Disaster recovery setup with backup and restore using AWS Backup.
+ 
+-	Components and AWS Services:
+-	EC2 Instances: Hosts application server.
+-	S3 Bucket: Stores data and logs, with versioning for data integrity.
+-	AWS Backup: Automates backup and cross-region data replication.
+-	SNS: Sends notifications for backup events.
+
+
+3.	Detailed Component Design
+-	EC2 Instance:
+-	Name: application-server
+- instance id: i-01520581279902795
+-	public DNS: ec2-3-110-204-208.ap-south-1.compute.amazonaws.com
+-	Instance Type: t2.micro for testing, scalable in production.
+-	Operating System: Windows 2019.
+-	IAM Role: Assigned for secure access to S3 [name = ec2s3accessrole]
+-SG attached: sg-0b206759788b34359
+
+
+-	S3 Bucket:
+-	Name: mtechproj
+-Se bucket ARN: arn:aws:s3:::mtechproj
+-	Bucket Configuration: Enabled with versioning, daily backups.
+-	Data Storage: Uses S3 Standard storage class.
+
+
+-	AWS Backup:
+-	Backup Plan: Defined policies for backup frequency and retention. [name = backup- plan]
+- Backup Plan id: 4c3fdc33-3802-4a85-a8be-2b8ba036007b
+-	Backup rule name: backup-rule
+-	Resource assignment: backup-sns-s3
+-	Backup Vault: Cross-region replication for disaster recovery. [name = backup_vault]
+-Vault ARN: arn:aws:backup:ap-south-1:851725542166:backup-vault:backup_vault
+- KMS id: 216eec37-13aa-48ad-96b6-aff4e5f0271b
+-	IAM Role ARN: arn:aws:iam::851725542166:role/BackupS3AccessRole
+ 
+
+// Cross Region Backup:
+-	Region: us-east-1
+-	Vault ARN: arn:aws:backup:us-east-1:851725542166:backup-vault:backup_vault
+
+
+-	SNS (Simple Notification Service):
+-	Notification Setup: Trigger notifications on backup events.
+-	Topic Name: BackupJobNotifications
+-	ARN: arn:aws:sns:ap-south-1:851725542166:BackupJobNotifications
+-	IAM role: arn:aws:iam::851725542166:role/BackupS3AccessRole
+-	Endpoint: mukkapriyanka903@gmail.com
+
+
+4.	Disaster Recovery and Backup Process
+-	Backup Frequency: Daily backups retained for 35 days.
+-	Disaster Recovery:
+-	Cross-region backups in Virginia for data redundancy.
+-	Restore process for selective file or entire bucket.
+
+
+5.	Security and Access Management
+-	IAM Roles and Policies:
+-	Policies for EC2-S3 access: arn:aws:iam::851725542166:role/ec2s3accessrole
+-	backup-related permissions: arn:aws:iam::851725542166:role/BackupS3AccessRole
+
+
+-	Security Groups:
+-	Ingress and egress rules configured for EC2 instances.
+- SG ID: sg-0b206759788b34359
+
+
+-	KMS (Key Management Service):
+-	Encryption keys for S3 data and backup data.
+- KMS ARN: arn:aws:kms:ap-south-1:851725542166:key/216eec37-13aa-48ad-96b6- aff4e5f0271b
+-	alias name: kms-alias
+ 
+6.	CI/CD Pipeline:
+-	Jenkins Pipeline:
+- Code deployment setup.
+-	GitHub Integration: Stores infrastructure code managed via Terraform.
+
+
+7.	Infrastructure as Code (IaC) with Terraform:
+-	Terraform Configuration:
+-	Providers and Modules: AWS provider setup for EC2, S3, IAM, Backup, etc.
+-	Resource Definitions: S3 bucket, EC2 instance, IAM policies, SNS, and KMS configurations.
+-	Sample Code Snippets:
+-	S3 Bucket Configuration:
+-	Example Terraform code for S3 bucket creation with versioning.
+-	EC2 Instance Configuration:
+-	Example for defining EC2 instance parameters.
+
+
+8.	Testing and Validation:
+-	Functional Testing:
+-	Validation of backup schedules, disaster recovery.
+-	Performance Testing:
+-	Backup and restore operation validation.
+-	Compliance and Security Testing:
+-	Access control, encryption, and logging verification.
+
+
+9.	Logging and Monitoring
+-	CloudWatch and SNS Integration:
+-	Logs for backup events and data integrity checks.
+-	PowerShell Scripts:
+-	Script for website status check and log sync to S3.
+ 
+10.	Conclusion and Recommendations
+-	In conclusion, the architecture successfully balances performance, resilience, and security. With ongoing monitoring, testing, and improvements, this solution will remain well- aligned with evolving business and technical requirements.
+-	Future Improvements: Recommendations for scaling or optimizing DR and backup strategies.
+
