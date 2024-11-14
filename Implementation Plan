@@ -1,0 +1,81 @@
+6.1 Infra Builld through Terraform:
+•
+Creating terraform code for IAM role
+•
+Creating EC2-instance
+•
+Creating VPC and security group for network configurations
+•
+Creating SNS topic for notification service
+•
+Creating Backup vault and plan
+•
+Creating KMS key for encryption
+•
+Creating S3 bucket for storage
+6.2 Brief about AWS Services:
+1.
+IAM (Identity and Access Management)
+o
+Role: Manages access to AWS resources, ensuring only authorized users and applications can interact with them.
+o
+Components: Users, Groups, Roles, and Policies define access levels and permissions.
+o
+Application: Assigns roles to EC2 for secure access to S3 without hard-coded credentials, and controls S3 and Backup access.
+2.
+Security Group
+o
+Role: Acts as a firewall, controlling network traffic to AWS resources.
+o
+Components: Inbound and outbound rules, and stateful filtering.
+o
+Application: Protects EC2 by restricting traffic types (e.g., HTTP), and secures data flow by limiting access to resources.
+3.
+EC2 (Elastic Compute Cloud)
+o
+Role: Provides virtual servers for running applications.
+o
+Components: Instance types, storage, Elastic IPs, and AMIs.
+o
+Application: Hosts the application server, interacts with S3, uses roles for access, and is monitored for scaling.
+4.
+S3 (Simple Storage Service)
+o
+Role: Scalable storage for application data, backups, and static assets.
+o
+Components: Buckets, objects, storage classes, and access control.
+o
+Application: Stores application data and backups, encrypted with KMS, with controlled access via IAM.
+25
+5.
+AWS Backup
+o
+Role: Automates data backup across AWS services.
+o
+Components: Backup plans, vaults, cross-region backups, and recovery points.
+o
+Application: Schedules automatic backups, stores them in vaults, and enables disaster recovery.
+6.
+SNS (Simple Notification Service)
+o
+Role: Sends notifications for system events.
+o
+Components: Topics, subscriptions, message filtering, and delivery.
+o
+Application: Alerts for backup completions or CloudWatch alarms, enabling quick response to events.
+7.
+KMS (Key Management Service)
+o
+Role: Manages encryption keys for data security.
+o
+Components: CMKs, data keys, key policies, and automatic key rotation.
+o
+Application: Encrypts data in S3 and backups, with access control for secure decryption and auditing.
+8.
+VPC (Virtual Private Cloud)
+o
+Role: Creates isolated networks for AWS resources.
+o
+Components: Subnets, route tables, internet/NAT gateways, security groups, ACLs.
+o
+Application: Separates web and database servers, controls traffic, and enables high availability across zones.
