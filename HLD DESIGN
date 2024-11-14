@@ -1,0 +1,75 @@
+5.1 Pre-consideration on design:
+•
+Is a data backup solution required? Yes
+•
+How often must the data be backed up to meet the requirement? Daily
+•
+How long is the backup data to be retained for? 35 days
+•
+What level of data recovery/backup is required? Individual folder/logs
+•
+Are they any requirement for archiving data? No
+•
+List of environments? Production only
+•
+Can the application traffic be distributed to multiple EC2 instances? No
+•
+What is the target OS platform and version? Windows 2019
+=> What we are NOT covering in this project:
+- Application Development: We are not building the actual application or writing the code for it.
+- Detailed Performance Tuning: We are not going into the specifics of optimizing the application's performance, such as making it run faster or use fewer resources.
+This scope defines what we are focusing on and what is outside the boundaries of this project. It helps set clear expectations and ensures we concentrate on delivering the key components effectively.
+5.2 Architecture Design Explanation
+Components and flow of the architecture.
+5.2.1 Design Requirements:
+VPC AWS Account Number:
+Region: ap-south-1 (Mumbai)
+Operating System Version: Windows 2019 64 bits
+vCPUs: 1 vCPU
+RAM: 1 GiB (Gigabyte)
+Instance family type: t2.micro
+EBS: 8 GiB by default root volume
+S3 Storgae Class: Standard
+21
+5.2.2 Design Diagram:
+5.2.3 Flow Explanation:
+1. (i-1): The application server processes data and interacts with the S3 bucket to store or retrieve data as needed.
+2. (i-2): Data stored in the S3 bucket is automatically backed up by AWS Backup. The backup process is managed according to the policies defined within AWS Backup.
+3. (i-3): Once a backup is created, it's stored in a Backup Vault in the same region as the S3 bucket, ensuring local data redundancy.
+4. (i-4): To ensure cross-region disaster recovery, the backup data is replicated to a Backup Vault in a different in different AWS region. This step is crucial for safeguarding against region-wide failures.
+5. Notifications: Throughout the process, Amazon SNS is used to send notifications about the status of the backups. This could include successful backup completions, failures, or other important events that require attention.
+22
+5.3 Requirement Gathering:
+The first step in the project involves gathering and understanding the requirements. This phase is crucial as it defines the scope, objectives, and expectations for the project. The requirements gathering process includes several key activities:
+a. Understanding the Project Objectives
+- Objective: To design and implement a two-tier architecture with a disaster recovery strategy using AWS services and DevOps tools.
+- Key Considerations:
+- Implement automated backup and disaster recovery mechanisms.
+- Ensure security and compliance with industry standards.
+- Use DevOps best practices for continuous integration and continuous deployment (CI/CD).
+b. Defining Functional and Non-Functional Requirements
+- Functional Requirements:
+- Data must be stored securely and be easily accessible for the application.
+- Automated backups should be scheduled and managed efficiently.
+- Notifications must be sent upon backup completion or failure.
+- Non-Functional Requirements:
+- Data durability and redundancy.
+- Security compliance (e.g., encryption, access control).
+5.4 Resources Required:
+AWS Services:
+o EC2 instances
+o Security Groups
+o S3 buckets
+o AWS Backup
+o IAM roles and policies
+o SNS
+DevOps Tools:
+23
+o Terraform for IaC
+o Jenkins for CI/CD
+o Github
+Skills:
+o AWS Architecture and Services
+o Infrastructure as code (IaC) - Terraform
+o CI/CD pipeline creation - Jenkins
+o Scripting for automation (e.g., AWS CLI Commands, Powershell)
