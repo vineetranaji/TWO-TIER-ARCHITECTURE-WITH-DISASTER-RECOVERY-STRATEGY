@@ -1,5 +1,0 @@
-The detailed design and implementation of this AWS two-tier architecture ensure the application is secure, scalable, and 
-resilient to failures. By integrating DevOps best practices and utilizing AWS services, the architecture supports continuous 
-delivery for streamlined updates, automated backups for data protection, and a comprehensive disaster recovery plan to 
-minimize downtime and data loss in the event of an incident. These features align with the project’s objectives to prioritize 
-data integrity and system reliability, ensuring the application remains dependable and responsive to user needs.
