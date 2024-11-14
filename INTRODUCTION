@@ -1,0 +1,41 @@
+DevOps tools and Cloud both can make the automation environment very easier by bringing a new flow to SDLC with the method of chain build, test, deploy and release feature.
+The integration of DevOps tools and cloud resources facilitates establishing the new working conditions and techniques for it.
+Cloud provides the services like PaaS (Platform as a Service), SaaS (Software as a service) and IaaS (Infrastructure as a service), and DevOps tools, that helps to manage the resources of the cloud by automating the tasks for deployment of any service that is offered by the cloud.
+With cloud automation, an organization can eliminate these repetitive and manual processes for workload deployment and management.
+When enforced properly, cloud automation saves an IT team time and money. It additionally results in fewer errors, as organizations can construct more integrated, predictable, and reliable workflows.
+1.1 Background:
+The purpose of this project is to design and implement a two-tier architecture with a disaster recovery (DR) strategy using AWS services and DevOps tools. The expected outcome is a robust and reliable system that ensures data integrity through automated backup and recovery mechanisms. By hosting the application on EC2 instances and using S3 for data storage, coupled with AWS Backup for disaster recovery, the project aims to minimize downtime and protect against data loss.
+1.2 Problem Statement:
+The existing process for many businesses involves manual backup procedures and ad-hoc disaster recovery plans. These methods are often prone to human error, lack consistency, and can result in significant downtime during recovery operations. Manual processes also struggle to keep up with the dynamic and scalable nature of modern cloud environments, making it difficult to ensure that all data is regularly and reliably backed up.
+In today's cloud computing world, protecting data and having reliable backups is incredibly important. Companies rely heavily on their data, and any loss can be disastrous, potentially halting operations and causing significant financial and reputational damage. To tackle this, businesses need strong, reliable solutions that can keep their systems running smoothly even when unexpected problems occur.
+1.3 Motivation to choose Cloud:
+Cloud (AWS) provides a lot of benefits. It is one of the most advanced and secure systems to protect data and information without any fear.
+10
+It does not only help us to save our time and money but also provides us many solutions which can make our life easy and give us the opportunity to compete in this innovative and technical world.
+Fig.1.1 Cloud Computing Benefits
+On the other hand, a DevOps environment gives strong support to cloud computing for delivering both new features, consistency, and stability. The combination of shared code, continuous integration, test-driven techniques, and automated deploys helps us to expose problems in our code and infrastructure configuration.
+DevOps make deployments predictable and free people from routine repetitive tasks and allow them to do more high-value things.
+1.4 Essence of the Approach:
+This project aims to design a two-tier architecture on AWS to enhance system resilience through a structured disaster recovery (DR) strategy. By leveraging AWS services such as EC2 for application hosting and S3 for data storage, along with AWS Backup for automated backup and recovery, the architecture ensures data integrity. DevOps tools will streamline deployment, monitoring, and automation of these processes, reducing manual intervention and minimizing the potential for human error. This approach supports dynamic scalability, reliability, and quicker recovery from disruptions, meeting the demands of modern cloud environments.
+1.5 Scope:
+The project’s scope includes:
+•
+Architecture Design: Creating a robust two-tier infrastructure on AWS with DR capabilities.
+•
+Backup and Recovery Automation: Implementing AWS Backup to schedule automatic backups for critical data and configurations, ensuring continuity and integrity.
+•
+Deployment and Monitoring: Using DevOps tools for automated deployment, monitoring, and incident response, enhancing operational efficiency.
+11
+•
+Data Protection: Ensuring regular backups and a reliable disaster recovery mechanism to minimize downtime and data loss.
+•
+Documentation and Testing: Producing thorough documentation, conducting system testing, and validating the DR process to confirm resilience and reliability.
+1.6. Statement of Assumptions
+This system will be user-friendly and with automated functionality. It is very straightforward as per the design and to implement it. The system needs very few resources and it can work in almost all configurations.
+Main factors:
+➢ Time consumption
+➢ Manual work
+➢ Accuracy
+➢ Data security
+➢ Maintenance
+➢ Cost effective
