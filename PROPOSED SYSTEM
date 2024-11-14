@@ -1,0 +1,26 @@
+Cloud and DevOps are joined at the hip. The overwhelming majority of cloud development scheme employ DevOps, and therefore the list can solely get longer.
+The advantages of using DevOps with cloud projects are also becoming highly outlined.
+They include application development speed-to-delivery to satisfy the requirements of the business units quicker, user demands that quickly fold back to the code, and lower costs for development, testing, deployment, and operations.
+DevOps' links with cloud computing straight forward easy to define:
+The centralized nature of cloud computing provides DevOps IaaS automation with a typically standard and centralized infrastructure for testing, deployment, and production. within the past, the distributed nature of some enterprise systems did not work well with centralized and common software deployment. Involving a cloud infrastructure solves many problems with distributed complexity.
+IaaS automation is turning into cloud-centric. Most public and private cloud computing providers support DevOps systemically on their platform, together with continuous integration and continuous development tools.
+This tight integration lowers the cost related to on-premises IaaS automation technology, and provides centralized governance and management for a sound Iaas automation method. Several developers who enter into the method, find that governance keeps them out of hassle, and it's easier to regulate this centrally via the cloud bring departments under control.
+Cloud lessens the requirement to account for resources leveraged. Clouds leverage usage-based accounting, which tracks the use of resources by application, developer, user, data, etc. ancient systems usually do not offer this service.
+Instead of building the infrastructure through the console of AWS on your browser, for reducing to create similar infrastructure multiple times and to reduce human error, we can automate it using open-source scripting and DevOps tools.
+Fig.4.1 CI/CD Based Cloud Hosting Blueprint
+17
+TERRAFORM: -
+HashiCorp Terraform allows you to safely and predictably deploy, change, and improve Infrastructure. It’s an open-source tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.
+Fig.4.2 Terraform
+AWS CLOUD: -
+Amazon Web Services (AWS) is a comprehensive, evolving cloud computing platform provided by Amazon. It provides a mix of infrastructure as a service (IaaS), platform as a service (PaaS) and packaged software as a service (SaaS) offerings.
+Fig.4.3 Amazon Web Services
+JENKINS: -
+Jenkins is a self-contained, open source automation server which can be used to automate all sorts of tasks related to building, testing, and delivering or deploying software.
+18
+Fig.4.4 Jenkins
+GITHUB: -
+GitHub is a web-based version-control and collaboration platform for software developers Git is used to store the source code for a project and track the complete history of all changes to that code. It allows developers to collaborate on a project more effectively by providing tools for managing possibly conflicting changes from multiple developers. GitHub allows developers to change, adapt and improve software from its public repositories for free, but it charges for private repositories, offering various paid plans
+Fig.4.5 Github
+DEVOPS:
+DevOps is a set of practices, tools and a cultural philosophy that automate and integrate the processes between software development and IT teams. It emphasizes team empowerment, cross-team communication and collaboration, and technology automation.
