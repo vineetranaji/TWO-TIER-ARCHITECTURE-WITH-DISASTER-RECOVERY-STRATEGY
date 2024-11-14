@@ -1,0 +1,40 @@
+The following official AWS documentation and white papers. 
+These sources provide in-depth information about each component involved in your architecture:
+
+1.	Application Server Interaction with S3:
+Amazon S3 Documentation: This documentation covers how applications can interact with S3 for storing and retrieving data.
+https://docs.aws.amazon.com/AmazonS3/latest/dev/Introduction.html
+
+Using AWS S3 with EC2: A knowledge article that explains how to use Amazon S3 in conjunction with an EC2 instance (which often acts as the application server).
+https://aws.amazon.com/premiumsupport/knowledge-center/ec2-upload-files-to-s3-bucket/
+
+2.	AWS Backup:
+AWS Backup Documentation: Provides details on how AWS Backup works, including policies and automated backup processes.
+AWS Backup Whitepaper: This whitepaper outlines best practices for using AWS Backup to protect data in the cloud.
+https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html
+
+3.	Backup Vault in Same Region:
+AWS Backup Vaults: This documentation explains how AWS Backup Vaults are used to store backups securely, including region-specific information.
+https://docs.aws.amazon.com/aws-backup/latest/devguide/backup-vault.html
+
+4.	Cross-Region/Account Backup Replication:
+Cross-Region Backup: An AWS blog post detailing how cross-region backup works within AWS Backup.
+https://aws.amazon.com/blogs/aws/aws-backup-now-supports-cross-region-backup/
+
+Cross-Account Backup: Documentation on setting up cross-account backup to enhance disaster recovery strategies.
+https://docs.aws.amazon.com/aws-backup/latest/devguide/iam-cross-account-access.html
+
+5.	Amazon SNS for Notifications:
+Amazon SNS Documentation: The official documentation on Amazon SNS, covering how to set up notifications for backup events.
+https://docs.aws.amazon.com/sns/latest/dg/welcome.html
+
+Using SNS with Backup: Specific information on how to integrate AWS Backup with Amazon SNS for notifications.
+https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring-backup-sns.html
+
+6.	https://aws.amazon.com/devops/
+
+7.	https://www.terraform.io/
+
+8.	https://jenkins.io/
+
+9.	https://github.com/
