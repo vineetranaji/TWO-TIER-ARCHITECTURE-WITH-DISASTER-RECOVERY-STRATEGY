@@ -1,43 +1,39 @@
-3.1 Hardware Requirements:
-The t2.micro instance type in Amazon Web Services (AWS) EC2 is part of the T2 family, which provides a baseline level of CPU performance with the ability to burst above the baseline when needed. Here's a breakdown of its hardware specifications:
+Hardware Requirements:
+The t2.micro instance type in Amazon Web Services (AWS) EC2 is part of the T2 family, which provides a baseline level of CPU performance with the ability to burst above the baseline when needed. 
+Here's a breakdown of its hardware specifications:
 EC2 Instance Type: t2.micro
 1. Processor:
-•
-vCPUs: 1 vCPU
+• vCPUs: 1 vCPU
+
 2. Memory:
-•
-RAM: 1 GiB (Gigabyte)
+• RAM: 1 GiB (Gigabyte)
+
 3. Disk Space:
-•
-Instance Store: No instance store is provided for t2.micro.
-•
-Elastic Block Store (EBS): You can attach EBS volumes to t2.micro instances. The size and type of these volumes can vary depending on your needs (e.g., General Purpose SSD, Provisioned IOPS SSD, etc.).
-o
+• Instance Store: No instance store is provided for t2.micro.
+• Elastic Block Store (EBS): You can attach EBS volumes to t2.micro instances. The size and type of these volumes can vary depending on your needs (e.g., General Purpose SSD, Provisioned IOPS SSD, etc.).
+
 Note: The root EBS volume is typically 8 GiB by default, but you can customize the size when launching the instance.
+
 Additional Information:
-•
-Network Performance: Low to Moderate.
-•
-Burstable Performance: t2.micro instances earn CPU credits when they are idle, and these credits can be used to burst up to full CPU core performance for a short time when needed.
+• Network Performance: Low to Moderate.
+• Burstable Performance: t2.micro instances earn CPU credits when they are idle, and these credits can be used to burst up to full CPU core performance for a short time when needed.
+
 Use Cases:
-•
-Suitable for low-traffic web servers, small databases, or development and testing environments where a small, low-cost instance is needed.
+• Suitable for low-traffic web servers, small databases, or development and testing environments where a small, low-cost instance is needed.
 The t2.micro instance type is a cost-effective choice for lightweight applications that require occasional bursts of CPU power but don't need a lot of memory or persistent high CPU performance.
+
 Suggested:
 You might need to use larger values that are appropriate for your production/real-time environment.
-15
+
 Operating System:
 All supported Windows operating systems
+
 3.2 Software Requirements
 All the tools that are required to install are DevOps tools and opensource tools.
+
 Following are the name of the tool and the version of the tool to be used:-
-•
-Terraform - v.12
-•
-Jenkins – >v.2 with updated plugins
-•
-Github – latest
-•
-AWS - >v.2
-•
-Power shell -v.7
+• Terraform - v.12
+• Jenkins – >v.2 with updated plugins
+• Github – latest
+• AWS - >v.2
+• Power shell -v.7
